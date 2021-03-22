@@ -1,0 +1,41 @@
+@import '/styles/colors';
+
+.presentation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7vw 0 12vw;
+  height: 700px;
+  margin-top: 4vw;
+  div[id='content'] {
+    width: 40%;
+    h1 {
+      text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+      margin: 0 0 5vw 0;
+      font-family: 'Nunito-Black';
+      font-size: 4vw;
+      color: $paradise-pink;
+    }
+    p {
+      font-family: 'Nunito-Regular';
+      font-size: 1.5vw;
+      color: $dark-arizona;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+      margin: 0 0 5vw 0;
+    }
+  }
+  object {
+    width: 50%;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $linen;
+  height: 20vw;
+  -webkit-box-shadow: 0 -1.04vw 3em $linen;
+  -moz-box-shadow: 0 -1.04vw 3em $linen;
+  box-shadow: 0 -1.04vw 3em $linen;
+}
