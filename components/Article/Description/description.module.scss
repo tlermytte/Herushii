@@ -1,0 +1,16 @@
+@use '/styles/colors' as *;
+
+.description {
+  color: $dark-arizona;
+  font-family: 'Nunito-Regular';
+  &[id='large'] {
+    font-size: 1.5vw;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  &[id='medium'] {
+  }
+  span {
+    font-family: 'Nunito-Black';
+    color: $paradise-pink;
+  }
+}

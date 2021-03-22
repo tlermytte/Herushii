@@ -1,13 +1,30 @@
-@import '/styles/colors';
+@use '/styles/colors' as *;
+@use '/styles/flex-sp-c.scss' as *;
 
 .header {
-  padding: 0 5vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $linen;
-  -webkit-box-shadow: 0 1.04vw 3em $linen;
-  -moz-box-shadow: 0 1.04vw 3em $linen;
-  box-shadow: 0 1.04vw 3em $linen;
+  width: 100vw;
+  height: 100vh;
+  nav {
+    @extend %flex-sp-c;
+    background-color: $linen;
+    height: 10%;
+    padding: 0 5vw;
+  }
+  section {
+    @extend %flex-sp-c;
+    padding: 0 7vw 0 12vw;
+    height: 90%;
+    article {
+      width: 40%;
+      h1 {
+        margin: 0 0 5vw 0;
+      }
+      p {
+        margin: 0 0 3vw 0;
+      }
+    }
+    object {
+      width: 50%;
+    }
+  }
 }

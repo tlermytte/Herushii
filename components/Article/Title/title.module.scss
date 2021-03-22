@@ -1,0 +1,14 @@
+@use '/styles/colors' as *;
+
+.title {
+  font-family: 'Nunito-Black';
+  color: $paradise-pink;
+  &[id='large'] {
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    font-size: 4vw;
+  }
+  &[id='medium'] {
+    font-size: 2vw;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+}

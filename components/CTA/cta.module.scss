@@ -1,28 +1,19 @@
-@import '/styles/colors';
+@use '/styles/colors' as *;
+@use '/styles/flex-sp-c' as *;
 
 %bnt {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  padding: 10px 30px;
-  height: 3.28125vw;
-  color: $pale-pink;
-  background-color: $paradise-pink;
   font-family: 'Nunito-Regular';
+  color: $pale-pink;
   font-size: 1.4vw;
-  border: $arizona solid 1px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 1.5625vw;
+  padding: 0.52vw 1.5625vw;
   transition: box-shadow 0.25s;
-  h1 {
-    position: relative;
-    top: -2px;
-    font-size: 1.4vw;
-    margin-left: 10px;
-  }
+  border: $arizona solid 0.05vw;
+  background-color: $paradise-pink;
+  box-shadow: 0 0.26vw 0.78vw rgba(0, 0, 0, 0.6);
+  cursor: pointer;
   &:hover {
-    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.1vw 0.42vw 0.52vw rgba(0, 0, 0, 0.5);
   }
   &:focus {
     outline: none;
@@ -31,11 +22,15 @@
 
 .cta {
   @extend %bnt;
-  &[id='link'] {
-    text-decoration: none;
-    width: 50%;
-  }
+  text-decoration: none;
 }
 
 .email {
+  @extend %flex-sp-c;
+  h1 {
+    position: relative;
+    top: -0.1vw;
+    font-size: 1.4vw;
+    margin-left: 0.52vw;
+  }
 }

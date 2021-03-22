@@ -18,12 +18,6 @@ interface ctaEmail {
   onClick?: () => void;
 }
 
-interface ctaButton {
-  text: string;
-  type: 'button' | 'submit';
-  logo?: boolean;
-}
-
 export function CTALink({ text, href, logo }: ctaLink): JSX.Element {
   return (
     <Link href={href}>
@@ -35,25 +29,13 @@ export function CTALink({ text, href, logo }: ctaLink): JSX.Element {
   );
 }
 
-export function CTAButton({ text, logo, type }: ctaButton): JSX.Element {
-  return (
-    <button id='button' className={style.cta} type={type}>
-      {text}
-      {logo && <Logo />}
-    </button>
-  );
-}
-
 export function CTAEmail({ text, logo, onClick }: ctaEmail): JSX.Element {
   const [form, setForm] = useState(() => 'close');
   return (
     <button
       id={form}
-      className={style.cta}
+      className={style.email}
       onClick={() => setForm(form === 'close' ? 'open' : 'close')}
-    >
-      {<p>{text}</p>}
-      {logo && <Logo />}
-    </button>
+    ></button>
   );
 }

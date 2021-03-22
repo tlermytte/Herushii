@@ -1,0 +1,17 @@
+@import '/styles/colors';
+
+.feature {
+  height: 13.8vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: $linen;
+  &[id='noreverse'] {
+  }
+}
+
+.top {
+}
+
+.bottom {
+}

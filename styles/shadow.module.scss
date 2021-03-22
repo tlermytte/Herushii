@@ -1,0 +1,13 @@
+@import '/styles/colors';
+
+.top {
+  -webkit-box-shadow: 0 -2.04vw 3em $linen;
+  -moz-box-shadow: 0 -2.04vw 3em $linen;
+  box-shadow: 0 -2.04vw 3em $linen;
+}
+
+.bottom {
+  -webkit-box-shadow: 0 1.04vw 3em $linen;
+  -moz-box-shadow: 0 1.04vw 3em $linen;
+  box-shadow: 0 1.04vw 3em $linen;
+}
