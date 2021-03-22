@@ -1,0 +1,16 @@
+@import '/styles/colors';
+
+.header {
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $linen;
+  -webkit-box-shadow: 0 1.04vw 3em $linen;
+  -moz-box-shadow: 0 1.04vw 3em $linen;
+  box-shadow: 0 1.04vw 3em $linen;
+  h1 {
+    margin-right: auto;
+  }
+}

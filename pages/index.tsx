@@ -1,9 +1,13 @@
-import Title from 'components/title';
+import Head from 'next/head';
+import Header from '../components/Header/header';
 
 export default function Home() {
   return (
     <>
-      <Title />
+      <Head>
+        <title>Herushii</title>
+      </Head>
+      <Header />
     </>
   );
 }
