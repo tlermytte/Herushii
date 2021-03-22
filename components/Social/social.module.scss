@@ -1,0 +1,19 @@
+@import '/styles/colors';
+
+.social {
+  border-radius: 30px;
+  padding: 10px;
+  background-color: $paradise-pink;
+  border: $arizona solid 1px;
+  svg {
+    transition: stroke 0.25s;
+    stroke: $pale-pink;
+    width: 30px;
+    height: auto;
+  }
+  &:hover {
+    svg {
+      stroke: $arizona;
+    }
+  }
+}

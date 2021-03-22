@@ -1,27 +1,58 @@
 import dynammic from 'next/dynamic';
+import Link from 'next/link';
+import { useState } from 'react';
 
 import style from './cta.module.scss';
 
 const Logo = dynammic(() => import('../Logo/logo'));
 
-interface Props {
+interface ctaLink {
   text: string;
-  type: 'social' | 'e-mail' | 'button';
+  href: string;
   logo?: boolean;
-  buttonType?: 'button' | 'submit';
+}
+
+interface ctaEmail {
+  text: string;
+  logo?: boolean;
   onClick?: () => void;
 }
 
-export default function CTA({
-  text,
-  type,
-  logo,
-  buttonType,
-  onClick,
-}: Props): JSX.Element {
+interface ctaButton {
+  text: string;
+  type: 'button' | 'submit';
+  logo?: boolean;
+}
+
+export function CTALink({ text, href, logo }: ctaLink): JSX.Element {
   return (
-    <button className={style.cta} onClick={onClick} type={buttonType}>
+    <Link href={href}>
+      <a id='link' className={style.cta}>
+        {text}
+        {logo && <Logo />}
+      </a>
+    </Link>
+  );
+}
+
+export function CTAButton({ text, logo, type }: ctaButton): JSX.Element {
+  return (
+    <button id='button' className={style.cta} type={type}>
       {text}
+      {logo && <Logo />}
+    </button>
+  );
+}
+
+export function CTAEmail({ text, logo, onClick }: ctaEmail): JSX.Element {
+  const [form, setForm] = useState(() => 'close');
+  return (
+    <button
+      id={form}
+      className={style.cta}
+      onClick={() => setForm(form === 'close' ? 'open' : 'close')}
+    >
+      {<p>{text}</p>}
       {logo && <Logo />}
     </button>
   );

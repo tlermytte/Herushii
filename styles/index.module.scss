@@ -6,7 +6,7 @@
   align-items: center;
   padding: 0 7vw 0 12vw;
   height: 700px;
-  margin-top: 4vw;
+  margin: 5vw 0;
   div[id='content'] {
     width: 40%;
     h1 {
@@ -32,10 +32,35 @@
 .features {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: $linen;
-  height: 20vw;
+  height: 30vw;
+  padding: 0 5vw;
   -webkit-box-shadow: 0 -1.04vw 3em $linen;
   -moz-box-shadow: 0 -1.04vw 3em $linen;
   box-shadow: 0 -1.04vw 3em $linen;
+  article[id='feature'] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      margin: 3vw 0 2vw 0;
+      font-family: 'Nunito-Black';
+      color: $paradise-pink;
+      font-size: 2vw;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      text-align: center;
+      color: $dark-arizona;
+      font-family: 'Nunito-Regular';
+      font-size: 1.1vw;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+      width: 25vw;
+      span {
+        font-family: 'Nunito-Black';
+        color: $paradise-pink;
+      }
+    }
+  }
 }

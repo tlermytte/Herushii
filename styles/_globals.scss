@@ -31,6 +31,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -44,6 +45,24 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #ea526f;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #ea526f;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      90deg,
+      rgba(100, 211, 174, 1) 0%,
+      rgba(47, 141, 110, 1) 49%,
+      rgba(100, 211, 174, 1) 100%
+    );
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
