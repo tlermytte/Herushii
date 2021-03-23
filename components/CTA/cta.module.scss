@@ -2,14 +2,15 @@
 @use '/styles/flex-sp-c' as *;
 
 %bnt {
-  font-family: 'Nunito-Regular';
-  color: $pale-pink;
-  font-size: 1.4vw;
+  font-family: 'Nunito-Black';
+  color: $linen;
+  -webkit-text-stroke: 0.5px black;
   border-radius: 1.5625vw;
   padding: 0.52vw 1.5625vw;
   transition: box-shadow 0.25s;
-  border: $arizona solid 0.05vw;
+  border: $arizona solid 0.15vw;
   background-color: $paradise-pink;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0.26vw 0.78vw rgba(0, 0, 0, 0.6);
   cursor: pointer;
   &:hover {
@@ -22,15 +23,95 @@
 
 .cta {
   @extend %bnt;
+  font-size: 1.4vw;
   text-decoration: none;
+  &[type='submit'] {
+    font-size: 1.4vw;
+    color: $paradise-pink;
+    background-color: $linen;
+    padding: 0.08vw 1vw;
+    border: none;
+    box-shadow: 0 0.26vw 0.78vw rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 0px black;
+  }
 }
 
 .email {
-  @extend %flex-sp-c;
-  h1 {
-    position: relative;
-    top: -0.1vw;
+  @extend %bnt;
+  cursor: auto;
+  padding: 0;
+  form {
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: auto;
+      width: 12vw;
+      height: 2vw;
+      background-color: transparent;
+      border: none;
+      font-size: 1vw;
+      color: white;
+      font-family: 'Nunito-Bold';
+      -webkit-text-stroke: 0px black;
+      margin-left: 0.5vw;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+  &[id='open'] {
+    width: 20vw;
+    padding: 0.26vw 0.5625vw;
+    p {
+      display: none;
+    }
+    button[type='button'] {
+      animation: disappear 0.4s;
+      display: none;
+    }
+  }
+  &[id='close'] {
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      font-family: 'Nunito-Black';
+      margin: 0;
+      font-size: 1.4vw;
+      color: $linen;
+      padding: 0.52vw 1.5625vw;
+      &:focus {
+        outline: none;
+      }
+    }
+    p,
+    form {
+      display: none;
+    }
+  }
+  &[id='end'] {
+    p {
+      margin: 0;
+      font-size: 1.4vw;
+      color: $linen;
+      padding: 0.52vw 1.5625vw;
+    }
+    button,
+    form {
+      display: none;
+    }
+  }
+  // transition: width 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes disappear {
+  0% {
     font-size: 1.4vw;
-    margin-left: 0.52vw;
+  }
+  100% {
+    font-size: 0vw;
   }
 }

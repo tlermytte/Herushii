@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'Knewave-Regular';
-  src: URL('../public/font/Knewave/Knewave-Regular.ttf') format('truetype');
-}
+// NUNITO
 
 @font-face {
   font-family: 'Nunito-Black';
@@ -26,4 +23,32 @@
 @font-face {
   font-family: 'Nunito-Light';
   src: URL('../public/font/Nunito/Nunito-Light.ttf') format('truetype');
+}
+
+// BALOO
+
+@font-face {
+  font-family: 'BalooChettan2-Bold';
+  src: URL('../public/font/Baloo/BalooChettan2-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BalooChettan2-ExtraBold';
+  src: URL('../public/font/Baloo/BalooChettan2-ExtraBold.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'BalooChettan2-Medium';
+  src: URL('../public/font/Baloo/BalooChettan2-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BalooChettan2-SemiBold';
+  src: URL('../public/font/Baloo/BalooChettan2-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BalooChettan2-Regular';
+  src: URL('../public/font/Baloo/BalooChettan2-Regular.ttf') format('truetype');
 }

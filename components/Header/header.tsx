@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import Logo from 'components/Logo/logo';
 import { CTAEmail } from 'components/CTA/cta';
 import { Article, ArticleContent } from 'components/Article/article';
 
-import shadow from '../../styles/shadow.module.scss';
+import shadow from 'styles/shadow.module.scss';
 import style from './header.module.scss';
 
 const intro: ArticleContent = {
@@ -16,11 +17,19 @@ const intro: ArticleContent = {
 };
 
 export default function Header(): JSX.Element {
+  const [email, setEmail] = useState(() => '');
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
   return (
-    <header className={`${style.header} ${shadow.bottom}`}>
+    <header className={`${style.header}`}>
       <nav className={shadow.bottom}>
         <Logo />
-        <CTAEmail text='Try' logo />
+        <CTAEmail
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          handleSubmit={handleSubmit}
+        />
       </nav>
       <section>
         <Article content={intro} cta />

@@ -1,0 +1,23 @@
+@use '/styles/colors' as *;
+
+.features {
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  width: 100vw;
+  background-color: $linen;
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    height: 25vh;
+    width: 100%;
+    article {
+      width: 80%;
+    }
+    &:not(:last-child) {
+      border-right: solid 2px $paradise-pink;
+    }
+  }
+}

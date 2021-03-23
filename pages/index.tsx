@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from 'components/Header/header';
 import Footer from 'components/Footer/footer';
-import Feature from 'components/Feature/feature';
+import Feature from 'components/Features/features';
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
         <title>Herushi</title>
       </Head>
       <Header />
+      <Feature />
       {/* <main>
       {/* <article id='feature'>
             <h2>Create your diete</h2>
