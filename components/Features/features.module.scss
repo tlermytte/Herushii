@@ -3,15 +3,16 @@
 .features {
   display: flex;
   justify-content: center;
-  height: 35vh;
+  padding-top: 12.5vh;
+  height: 50vh;
   width: 100vw;
   background-color: $linen;
   section {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
-    height: 25vh;
+    height: 50%;
     width: 100%;
     article {
       width: 80%;

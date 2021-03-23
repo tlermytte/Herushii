@@ -33,7 +33,7 @@ export default function Header(): JSX.Element {
       </nav>
       <section>
         <Article content={intro} cta />
-        <object data='/sapiens.svg' type='image/svg+xml'></object>
+        <object data='/sapiens_header.svg' type='image/svg+xml'></object>
       </section>
     </header>
   );

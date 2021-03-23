@@ -37,7 +37,7 @@ export function CTAEmail({
   return (
     <div id={form} className={style.email}>
       <button type='button' onClick={() => setForm('open')}>
-        Try Herushi
+        Notify me
       </button>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input

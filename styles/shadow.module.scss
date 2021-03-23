@@ -1,13 +1,22 @@
 @import '/styles/colors';
 
+$top: 0 -2.04vw 3em $linen;
+$bottom: 0 2.04vw 3em $linen;
+
 .top {
-  -webkit-box-shadow: 0 -2.04vw 3em $linen;
-  -moz-box-shadow: 0 -2.04vw 3em $linen;
-  box-shadow: 0 -2.04vw 3em $linen;
+  -webkit-box-shadow: $top;
+  -moz-box-shadow: $top;
+  box-shadow: $top;
 }
 
 .bottom {
-  -webkit-box-shadow: 0 1.04vw 3em $linen;
-  -moz-box-shadow: 0 1.04vw 3em $linen;
-  box-shadow: 0 1.04vw 3em $linen;
+  -webkit-box-shadow: $bottom;
+  -moz-box-shadow: $bottom;
+  box-shadow: $bottom;
+}
+
+.both {
+  -webkit-box-shadow: $bottom, $top;
+  -moz-box-shadow: $bottom, $top;
+  box-shadow: $bottom, $top;
 }
