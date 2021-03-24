@@ -32,7 +32,7 @@ const manage: ArticleContent = {
 
 export default function Features(): JSX.Element {
   return (
-    <div className={`${style.features} ${shadow.both}`}>
+    <div id='features' className={`${style.features} ${shadow.both}`}>
       <section>
         <Article content={diete} />
       </section>
