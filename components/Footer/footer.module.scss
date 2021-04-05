@@ -1,6 +1,14 @@
 @use '/styles/colors' as *;
 @use '/styles/flex-sp-c.scss' as *;
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+
 .footer {
   @extend %flex-sp-c;
   height: 10vh;
@@ -11,6 +19,66 @@
     display: flex;
     :not(:last-child) {
       margin-right: 1.04vw;
+    }
+  }
+}
+
+%input {
+  border-radius: 1.5625vw;
+  width: 25vw;
+  background-color: white;
+  transition: background-color 0.25s;
+  font-size: 1vw;
+  font-family: 'Nunito-Bold';
+  border: solid $paradise-pink 2px;
+  color: $paradise-pink;
+  &::placeholder {
+    color: $paradise-pink;
+  }
+  &:focus {
+    color: white;
+    outline: none;
+    background-color: $paradise-pink;
+    transition: background-color 0.25s, color 0.25s;
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+.contact {
+  @extend %flex-sp-c;
+  width: 100vw;
+  height: 80vh;
+  padding: 0 12vw 0 7vw;
+  object {
+    margin-top: 4vw;
+    width: 50%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding-bottom: 4vw;
+    input {
+      @extend %input;
+      height: 2.2vw;
+      padding: 0 0 0 1vw;
+    }
+    textarea {
+      @extend %input;
+      height: 5vw;
+      resize: none;
+      padding: 0.5vw 0 0 1vw;
+    }
+    button {
+      width: 60%;
+    }
+    :not(:last-child) {
+      margin-bottom: 2vw;
+    }
+    h1 {
+      margin-bottom: 5vw;
     }
   }
 }

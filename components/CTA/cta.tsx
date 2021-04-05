@@ -3,26 +3,49 @@ import { useState } from 'react';
 
 import style from './cta.module.scss';
 
-interface ctaLink {
-  text: string;
-  href: string;
-}
-
-export function CTALink({ text, href }: ctaLink): JSX.Element {
-  return (
-    <Link href={href}>
-      <a id='link' className={style.cta}>
-        {text}
-      </a>
-    </Link>
-  );
-}
-
 interface Email {
   value: string;
   status?: 'close' | 'open' | 'end';
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+interface Props {
+  type: 'button' | 'link';
+  text: string;
+  href?: string;
+  buttonType?: 'button' | 'submit';
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+}
+
+export function CTA({
+  type,
+  buttonType,
+  text,
+  href,
+  onClick,
+}: Props): JSX.Element {
+  return (
+    <>
+      {type === 'button' && (
+        <button
+          id='button'
+          className={style.cta}
+          type={buttonType}
+          onClick={onClick}
+        >
+          {text}
+        </button>
+      )}
+      {type === 'link' && (
+        <Link href={href}>
+          <a id='link' className={style.cta}>
+            {text}
+          </a>
+        </Link>
+      )}
+    </>
+  );
 }
 
 export function CTAEmail({
@@ -48,7 +71,7 @@ export function CTAEmail({
         />
         <button
           type='submit'
-          className={style.cta}
+          className={`${style.submit} ${style.cta}`}
           onClick={() => setForm('end')}
         >
           send

@@ -1,13 +1,17 @@
 import { Article, ArticleContent } from 'components/Article/article';
+import { CTA } from 'components/CTA/cta';
+import { useState } from 'react';
+import Image from 'next/image';
 
 import style from './features.module.scss';
 import shadow from 'styles/shadow.module.scss';
+import fade from 'styles/fade.module.scss';
 
 const diete: ArticleContent = {
   title: { text: 'Create your diete', size: 'medium' },
   description: {
     text:
-      'Heru helps you determine your food needs based on your physical characteristics and professional activities.',
+      'Heru helps you in real time to determine your food needs based on your metabolism, your health, your physical and professional activities.',
     size: 'medium',
   },
 };
@@ -31,17 +35,58 @@ const manage: ArticleContent = {
 };
 
 export default function Features(): JSX.Element {
+  const [section, setSection] = useState<number>(() => 0);
   return (
     <div id='features' className={`${style.features} ${shadow.both}`}>
-      <section>
-        <Article content={diete} />
+      <section className={style.features__visualisation}>
+        {section === 0 && (
+          <Image
+            src='/CreateYourDiet.png'
+            alt='create your diet'
+            width={450}
+            height={850.58}
+            className={section !== 0 ? fade.fadeOut : fade.fadeIn}
+          />
+        )}
+        {section === 1 && (
+          <Image
+            src='/PlanYourMeal.png'
+            alt='plan your meal'
+            width={450}
+            height={850.58}
+            className={section !== 1 ? fade.fadeOut : fade.fadeIn}
+          />
+        )}
+        {section === 2 && (
+          <Image
+            src='/getDelivered.png'
+            alt='get deliverd'
+            width={450}
+            height={850.58}
+            className={section !== 2 ? fade.fadeOut : fade.fadeIn}
+          />
+        )}
       </section>
-      <section>
-        <Article content={delivery} />
-      </section>
-      <section>
-        <Article content={manage} />
-      </section>
+      <div className={style.features__description}>
+        <section
+          onClick={() => setSection(0)}
+          className={section !== 0 ? fade.fadeOut : fade.fadeIn}
+        >
+          <Article content={diete} />
+        </section>
+        <section
+          onClick={() => setSection(1)}
+          className={section !== 1 ? fade.fadeOut : fade.fadeIn}
+        >
+          <Article content={delivery} />
+        </section>
+        <section
+          onClick={() => setSection(2)}
+          className={section !== 2 ? fade.fadeOut : fade.fadeIn}
+        >
+          <Article content={manage} />
+        </section>
+      </div>
     </div>
   );
 }

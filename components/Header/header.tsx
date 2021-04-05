@@ -22,19 +22,21 @@ export default function Header(): JSX.Element {
     e.preventDefault();
   };
   return (
-    <header className={`${style.header}`}>
-      <nav className={shadow.bottom}>
-        <Logo />
-        <CTAEmail
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          handleSubmit={handleSubmit}
-        />
-      </nav>
+    <div className={style.container}>
+      <header className={`${style.header}`}>
+        <nav className={shadow.bottom}>
+          <Logo />
+          <CTAEmail
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            handleSubmit={handleSubmit}
+          />
+        </nav>
+      </header>
       <section>
         <Article content={intro} cta />
         <object data='/sapiens_header.svg' type='image/svg+xml'></object>
       </section>
-    </header>
+    </div>
   );
 }

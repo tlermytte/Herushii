@@ -1,0 +1,30 @@
+@mixin fade($animation, $to, $time) {
+  animation: $animation $time;
+  opacity: $to;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.fadeIn {
+  @include fade(fadeIn, 1, 0.5s);
+}
+
+.fadeOut {
+  @include fade(fadeOut, 0.3, 0.5s);
+}

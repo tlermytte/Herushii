@@ -2,23 +2,35 @@
 
 .features {
   display: flex;
-  justify-content: center;
-  padding-top: 12.5vh;
-  height: 50vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100vw;
+  height: 80vh;
   background-color: $linen;
-  section {
+  padding: 0 6vw 0 15vw;
+  &__description {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 50%;
-    width: 100%;
-    article {
-      width: 80%;
+    flex-direction: column;
+    margin-bottom: 2.08vw;
+    width: 55%;
+    section {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      article {
+        width: 80%;
+      }
+      &:not(:last-child) {
+        margin-bottom: 2.6vw;
+      }
     }
-    &:not(:last-child) {
-      border-right: solid 2px $paradise-pink;
+  }
+  &__visualisation {
+    img {
+      width: 450px;
     }
   }
 }

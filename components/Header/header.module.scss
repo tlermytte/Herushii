@@ -2,19 +2,23 @@
 @use '/styles/flex-sp-c.scss' as *;
 @use '/styles/breackpoints' as *;
 
-.header {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
-  height: 50vw;
-  nav {
-    @extend %flex-sp-c;
-    background-color: $linen;
-    height: 10%;
-    padding: 0 5vw;
+  height: 100vh;
+  header {
+    nav {
+      @extend %flex-sp-c;
+      background-color: $linen;
+      padding: 0 5vw;
+    }
   }
   section {
     @extend %flex-sp-c;
     padding: 0 7vw 0 12vw;
-    height: 90%;
+    margin-bottom: 5.2vw;
     article {
       width: 40%;
       h1 {

@@ -1,6 +1,6 @@
 import Description from './Description/description';
 import Title from './Title/title';
-import { CTALink } from 'components/CTA/cta';
+import { CTA } from 'components/CTA/cta';
 
 export type ArticleContent = {
   title: { text: string; size: 'large' | 'medium' };
@@ -21,7 +21,9 @@ export function Article({ content, cta }: Props): JSX.Element {
         text={content.description.text}
         size={content.description.size}
       />
-      {cta && <CTALink text={content.cta.text} href={content.cta.href} />}
+      {cta && (
+        <CTA type='link' text={content.cta.text} href={content.cta.href} />
+      )}
     </article>
   );
 }
