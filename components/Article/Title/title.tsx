@@ -1,7 +1,7 @@
 import style from './title.module.scss';
 
 interface Props {
-  text: string;
+  text?: string;
   size: 'large' | 'medium';
 }
 

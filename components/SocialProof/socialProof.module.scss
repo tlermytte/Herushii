@@ -1,0 +1,15 @@
+@use '/styles/colors' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  background-color: $linen;
+  p {
+    width: 60vw;
+    margin: 0;
+    text-align: center;
+  }
+}
