@@ -16,7 +16,7 @@ const diete: ArticleContent = {
   },
 };
 
-const delivery: ArticleContent = {
+const plan: ArticleContent = {
   title: { text: 'Make a plan !', size: 'medium' },
   description: {
     text:
@@ -25,11 +25,11 @@ const delivery: ArticleContent = {
   },
 };
 
-const manage: ArticleContent = {
-  title: { text: 'Manage your food', size: 'medium' },
+const delivery: ArticleContent = {
+  title: { text: 'Get delivered', size: 'medium' },
   description: {
     text:
-      'Heru keeps you informed of the food you still have at your disposal or the food close to the expiration date, thus avoiding the magnetic waste',
+      'Heru already knows what food you have at your disposal, he offers you only what you need and delivers it all within the day! ',
     size: 'medium',
   },
 };
@@ -79,13 +79,13 @@ export default function Features(): JSX.Element {
             onClick={() => setSection(1)}
             className={section !== 1 ? fade.fadeOut : fade.fadeIn}
           >
-            <Article content={delivery} />
+            <Article content={plan} />
           </section>
           <section
             onClick={() => setSection(2)}
             className={section !== 2 ? fade.fadeOut : fade.fadeIn}
           >
-            <Article content={manage} />
+            <Article content={delivery} />
           </section>
         </div>
       </div>
